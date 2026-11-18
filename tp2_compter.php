@@ -14,7 +14,12 @@
 </head>
 <body>
 <?php
-
+$base = new PDO('mysql:host=localhost;dbname=ludotheque', 'root', '');
+$requete = $base->query('SELECT COUNT(*) FROM `jeu`');
+$nbr = $requete->fetchColumn();
+echo "Il y a " . $nbr . " jeux dans la ludothèque.";
 ?>
 </body>
 </html>
+
+
