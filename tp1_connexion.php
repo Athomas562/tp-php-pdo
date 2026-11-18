@@ -11,4 +11,15 @@
   Expérience : remplacer "ludotheque" par "ludotek". Quel message obtenez-vous ?
 */
 
+// Pour l'experience ca me donne cette erreur "Fatal error: Uncaught PDOException: SQLSTATE[HY000] [1049] Base 'ludotek' inconnue in C:\wamp64\www\tp-php-pdo\tp1_connexion.php on line 16"
+
+try {
+    $pdo = new PDO(
+        "mysql:host=localhost;dbname=ludotheque",
+        "root"
+    );
+    echo "Connexion réussie !";
+} catch (PDOExeption){}
+
 ?>
+
