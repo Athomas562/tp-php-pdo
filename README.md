@@ -1,6 +1,6 @@
 # TP PHP & PDO – Ludothèque
 
-Dans cette série de 9 TP, vous allez écrire des pages PHP qui lisent et modifient une base de données MySQL avec **PDO**.
+Dans cette série de 10 TP, vous allez écrire des pages PHP qui lisent et modifient une base de données MySQL avec **PDO**.
 
 ## 1. Installer la base `ludotheque` dans MySQL
 
@@ -14,7 +14,7 @@ Dans cette série de 9 TP, vous allez écrire des pages PHP qui lisent et modifi
 
 Autre méthode : ouvrez l'onglet **SQL**, collez-y le contenu de `base_ludotheque.sql` et cliquez sur **Exécuter**.
 
-> Pour remettre la base à zéro (après les TP 5, 7, 8 et 9), il suffit de réimporter `base_ludotheque.sql`.
+> Pour remettre la base à zéro (après les TP 5, 7, 8, 9 et 10), il suffit de réimporter `base_ludotheque.sql`.
 
 ### Structure de la table `jeu`
 
@@ -111,7 +111,7 @@ Identifiants MySQL :
 - Faites les TP **dans l'ordre** : chacun réutilise ce que vous avez appris avant.
 - Chaque fichier contient son **énoncé** en haut. Écrivez votre code dans les blocs `<?php ?>` vides.
 - Ne modifiez pas le HTML fourni (formulaires, attributs `name`), sauf si l'énoncé le demande.
-- Après le TP 1, recopiez votre code de connexion dans `connexion.php` (sans le message « Connexion réussie ! »). Les TP 2 à 9 l'utilisent avec `require 'connexion.php';`.
+- Après le TP 1, recopiez votre code de connexion dans `connexion.php` (sans le message « Connexion réussie ! »). Les TP 2 à 10 l'utilisent avec `require 'connexion.php';`.
 - Testez vos requêtes SQL dans l'onglet **SQL** de phpMyAdmin avant de les écrire en PHP.
 - Dès qu'une valeur vient de l'utilisateur (formulaire, URL), utilisez une **requête préparée** (`prepare()` + `execute()`).
 
@@ -126,3 +126,4 @@ Identifiants MySQL :
 | 7  | `tp7_ajout_formulaire.php`   | Formulaire d'ajout                      |
 | 8  | `tp8_modifier_supprimer.php` | Modifier et supprimer                   |
 | 9  | `tp9_bonus_ludotheque.php`   | Bonus : mini-application                |
+| 10 | `tp10_procedures_stockees.php` + `tp10_procedures.sql` | Procédures stockées |
