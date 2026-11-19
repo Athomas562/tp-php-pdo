@@ -2,6 +2,8 @@
 
 Dans cette série de 10 TP, vous allez écrire des pages PHP qui lisent et modifient une base de données MySQL avec **PDO**.
 
+> Le dossier [`SQL/`](SQL/) contient une série de 9 TP pour apprendre les requêtes SQL (`SELECT`, `WHERE`, `ORDER BY`, `GROUP BY`, `JOIN`). Les consignes sont dans [`SQL/README.md`](SQL/README.md).
+
 ## 1. Installer la base `ludotheque` dans MySQL
 
 1. Lancez **MAMP** (ou WAMP / XAMPP), puis cliquez sur **Start** pour démarrer Apache et MySQL.
