@@ -16,8 +16,25 @@
     <table border="1">
         <tr><th>Titre</th><th>Genre</th><th>Année</th><th>Note</th></tr>
         <?php
+     
+require("connexion.php");
 
-        ?>
+$jeux = $base->query("SELECT * FROM jeu");
+$jeuxListe = $jeux->fetchAll(PDO::FETCH_ASSOC);
+echo '<tr>';
+
+foreach ($jeuxListe as $jeux){
+    echo '<td>' . $jeux['titre'] . '</td>';
+    echo '<td>' . $jeux['genre'] . '</td>';
+    echo '<td>' . $jeux['annee'] . '</td>';
+    echo '<td>' . $jeux['note'] . '</td>';
+
+
+}
+echo '</tr>';
+
+
+?>
     </table>
 </body>
 </html>

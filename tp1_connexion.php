@@ -19,7 +19,9 @@ try {
         "root"
     );
     echo "Connexion réussie !";
-} catch (PDOExeption){}
+} catch (Exception $e) {
+    die('Erreur : ' . $e->getMessage());
+}
 
 ?>
 

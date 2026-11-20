@@ -5,4 +5,13 @@
   Ce fichier sera inclus dans les TP 2 à 9 avec : require 'connexion.php';
 */
 
+try {
+    $base = new PDO(
+        "mysql:host=localhost;dbname=ludotheque",
+        "root"
+    );
+}
+catch (Exception $e) {
+   die('Erreur : ' . $e->getMessage());
+}
 ?>

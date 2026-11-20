@@ -15,4 +15,12 @@
   Réponse :
 */
 
+require("connexion.php");
+
+$sql = "INSERT INTO Jeu (Titre, Annee ,Note) VALUES ('Pac-man', '1990', '16')";
+$base->exec($sql);
+$sql = "UPDATE Jeu SET Note = '15' WHERE Titre = 'Fortnite'";
+$base->exec($sql);
+$sql = "DELETE FROM Jeu WHERE Titre = 'Pac-man'";
+$base->exec($sql);
 ?>
