@@ -13,21 +13,50 @@
   Les titres et genres affichés doivent être protégés.
   Test : ajouter un jeu dont le titre est <b>Test</b>. Que voit-on ?
 */
+    require('connexion.php');
+
+    if (isset($_GET['supprimer'])) {
+    $req = $base->prepare('DELETE FROM jeu WHERE id = :id');
+    $req->execute(array(
+        'id' => $_GET['supprimer']
+    ));
+   }
+
+   if (isset($_GET[''])){
+    
+   }
+ 
+
+            if (isset($_POST['titre'])) {
+                $req = $base->prepare('INSERT INTO jeu (titre, genre, annee, note) VALUES (:titre, :genre, :annee, :note)');
+                $req->execute(array(
+                    'titre' => $_POST['titre'],
+                    'genre' => $_POST['genre'],
+                    'annee' => $_POST['annee'],
+                    'note' => $_POST['note']
+                ));
+            };
+
+            $resultat = $base->query('SELECT id, titre, genre, annee, note FROM jeu ORDER BY note DESC');
+            $nombre = $resultat->rowCount();
+
 
 ?>
 <!DOCTYPE html>
 <html lang="fr">
 <head>
     <meta charset="utf-8">
-    <title>Ma ludothèque</title>
+    <title>Ma ludothèque(<?php echo $nombre; ?> jeux)</title>
 </head>
 <body>
-    <h1>Ma ludothèque</h1>
+    <h1>Ma ludothèque (<?php echo $nombre; ?> jeux)</h1>
 
     <table border="1">
         <tr><th>Titre</th><th>Genre</th><th>Année</th><th>Note</th><th></th></tr>
         <?php
-
+           while ($ligne = $resultat->fetch()){
+            echo '<tr>';
+           }
         ?>
     </table>
 

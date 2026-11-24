@@ -29,7 +29,21 @@
     </form>
 
 <?php
+   require("connexion.php");
+
+    $genre = $_GET['Genre'];
+
+    $sql = "SELECT Titre, Note FROM Jeu WHERE Genre = ?";
+
+    $resultat = $base->prepare($sql);
+    $resultat->execute([$genre]);
+
+    $jeux = $resultat->fetchAll(PDO::FETCH_ASSOC);
+
+    echo '';
+
 
 ?>
 </body>
 </html>
+
